@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    
+</head>
+<body class="bg">
+<div class="mode"><label>
+    <input class="input" type="checkbox">
+    <span class="check"></span>
+</label>
+
+<form    onsubmit="search (event)"><div class="profile" onclick="alert ( 'hy my name is MUHAMMAD Muzammil ALI and i am a frontend developer for more details contact on (alimuzammilali76@gmail.com)')"><img width="100px " height="60px" src="./profile.png" alt=""></div>
+</div>
+
+   <span class="mainfirst"> <h1> Zidian By  Muzammil</h1>
+   
+
+    <div class="main">
+    
+    
+    <button id="search-btn"><img width="35em" height="40em" src="./logosearch new.png" alt="searchlogo"> </button> 
+    <div class="input"><input id="search-input" type="search" placeholder="search word here"></div>
+    <div><img src="" alt=""></div>
+    </div>
+ </div>
+
+
+
+
+
+ <div class="result">
+
+    <div class="re1"></div>
+    
+    <div class="flex">   <div> <img  alt=""></div><div><img src=" " alt=""></div>
+    </div>
+    
+
+
+
+
+
+    
+     </div>
+
+
+
+
+
+<div class="resultcontainer">
+
+<div class="result" id="result">
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+    </span></form>
+
+
+    <!-- <h1>Dictionary App</h1>
+	<input type="text" id="search-input">
+	<button type="submit" id="search-btn">Search</button>
+	<div id="result"></div> -->
+
+   
+ 
+    
+
+
+
+<!-- <script>
+   		const searchBtn = document.querySelector("#search-btn");
+		const searchInput = document.querySelector("#search-input");
+		const resultDiv = document.querySelector("#result");
+
+		function search ( event )
+         {  
+            event.preventDefault();
+			const word = searchInput.value.trim();
+			if (word) {
+            fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/voluminous?key=d563bb24-2fd7-4082-ba6d-29d34a6996bf`
+)
+				.then(response => response.json())
+				.then(data => {
+					let output = "";
+					data.forEach(result => {
+						output += `<h2>${result.meta.id}</h2>`;
+						output += "<ul>";
+						result.shortdef.forEach(def => {
+							output += `<li>${def}</li>`;
+						});
+						output += "</ul>";
+					});
+                    console.log(output)
+					resultDiv.innerHTML = output;
+				})
+				.catch(error => console.log(error));
+			} else {
+				resultDiv.innerHTML = "<p>Please enter a word to search</p>";
+			}
+		};
+	</script> -->
+
+
+
+<!-- 
+    <script>
+        const searchBtn = document.querySelector("#search-btn");
+        const searchInput = document.querySelector("#search-input");
+        const resultDiv = document.querySelector("#result");
+      
+        function search(event) {
+          event.preventDefault();
+          const word = searchInput.value.trim();
+          if (word) {
+            fetch(`https://wordsapiv1.p.rapidapi.com/words/${word}`, {
+              method: "GET",
+              headers: {
+                "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
+                "x-rapidapi-key": "6925851749msh24c647566acf695p",
+              },
+            })
+              .then((response) => {
+                return response.json();
+                console.log(response)
+              })
+              .then((data) => {
+                // Display the definition of the word in the div
+                document.getElementById("definition").innerHTML =
+                  data.definitions[0].definition;
+              })
+              .catch((error) => {
+                console.log(error);
+              });
+          }
+        }
+      </script> -->
+      
+
+
+<!-- 
+      <script>
+        
+        function search(event)
+        {
+    event.preventDefault(); -->
+
+    // api key and user input
+
+    // let apiKey = "wVhOxToKsaw3TU8oUcdb0A==CsvuBqdDEZcgG1IJ";
+    // let input = document.querySelector("#search-input").value;
+    // let isValid = "";
+
+    // taking response in object
+
+//     $.ajax({
+//         method: "GET",
+//         url: "https://api.api-ninjas.com/v1/dictionary?word=" + input,
+//         headers: { "X-Api-Key": apiKey },
+//         contentType: "application/json",
+
+//         // if success in response
+
+//         success: function(result) {
+//             console.log(result);
+
+//             // valid word or not
+
+//             let isTrue = result.valid;
+//             if (isTrue === true) {
+//                 isValid = "The Word Is Valid";
+//             } else {
+//                 isValid = "Invalid Word";
+//             }
+
+//             document.querySelector("#result").innerHTML = isValid;
+
+//             //show word in output
+// document.querySelector("#result").innerHTML = `"${result.word}"`;
+//             // 
+
+//             // definition of word
+
+//             let definitionLines = result.definition.split(";");
+//             let definitionShort = definitionLines.slice(0, 1).join(";");
+//             document.querySelector("#result").innerHTML = definitionShort;
+//         },
+
+//         // if error
+
+//         error: function ajaxError(jqXHR) {
+//             console.error("Error:", jqXHR.status, jqXHR.statusText);
+//         },
+//     });
+// }    </script>
+
+</body>
+</html>
